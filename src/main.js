@@ -1,0 +1,1 @@
+console.log("Its's Integer's Custom");
