@@ -7,7 +7,9 @@
     "dev": "webpack serve",
     "build": "webpack --mode production --progress --hide-modules",
     "tscheck": "tsc",
-    "tscheck:watch": "tsc -w"
+    "tscheck:watch": "tsc -w",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
+    "format": "yarn run lint --fix & yarn prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -19,6 +21,7 @@
     "babel-loader": "^9.1.2",
     "core-js": "^3.27.1",
     "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-config-react-app": "^7.0.1",
     "prettier": "^2.8.3",
     "regenerator-runtime": "^0.13.11",
