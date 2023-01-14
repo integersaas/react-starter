@@ -10,5 +10,19 @@ module.exports = {
       directory: path.resolve(__dirname, './dist')
     }
   },
-  mode: 'development'
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.(js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.jsx', '.js'],
+  },
 }
