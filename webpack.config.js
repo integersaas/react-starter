@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
+const Dotenv = require('dotenv-webpack');
+
 module.exports = {
   entry: './src/Index.tsx',
   output: {
@@ -30,4 +32,10 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
+  plugins: [
+    new Dotenv({
+      path: `./.env`
+    }),
+  ],
+  devtool: "source-map"
 }
